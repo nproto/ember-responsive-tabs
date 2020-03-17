@@ -11,11 +11,11 @@ export default Component.extend(ComponentParent, {
 
     layout,
     isOpen: false,
-    classNames:['tabs'],
+    classNames:['rtabs'],
     classNameBindings: [
       'isOpen:tabs-open'
     ],
-
+ 
     childPanes: filter('children', function(view) {
         return view instanceof TabPane;
     }),

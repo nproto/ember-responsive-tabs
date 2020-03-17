@@ -3,26 +3,28 @@
     --tab-secondary: #becbd2;
     --tab-hover: #768e9d;
 }
-.tabs  {
+
+.rtabs  {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 1em 0 2em;
     font-weight: 300;
+	height: 100%;
 }
 
-.tabs nav {
+.rtabs nav {
     text-align: center;
 }
 
-.tabs nav ul {
+.rtabs nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: inline-block;
 }
 
-.tabs nav ul li {
+.rtabs nav ul li {
     border: 1px solid var(--tab-secondary);
     border-bottom: none;
     margin: 0 0.25em;
@@ -31,14 +33,14 @@
     position: relative;
 }
 
-.tabs nav li.tab-current {
+.rtabs nav li.tab-current {
     border: 1px solid var(--tab-primary);
     box-shadow: inset 0 2px var(--tab-primary);
     border-bottom: none;
     z-index: 100;
 }
-.tabs nav li.tab-current:before,
-.tabs nav li.tab-current:after {
+.rtabs nav li.tab-current:before,
+.rtabs nav li.tab-current:after {
 	  content: '';
 	  position: absolute;
 	  height: 1px;
@@ -48,32 +50,32 @@
 	  background: var(--tab-primary);
 }
 
-.tabs nav li.tab-current:after {
+.rtabs nav li.tab-current:after {
 	  right: auto;
 	  left: 100%;
 	  width: 4000px;
 }
 
-.tabs nav a {
+.rtabs nav a {
 	  color: var(--tab-secondary);
 	  display: block;
-	  font-size: 1.45em;
+	  /*font-size: 1.45em;*/
 	  line-height: 2.5;
-	  padding: 0 1.25em;
+	  padding: 0 1em;
 	  white-space: nowrap;
     text-decoration: none;
 }
 
-.tabs nav a:hover {
+.rtabs nav a:hover {
 	  color: var(--tab-hover);
 }
 
-.tabs nav li.tab-current a {
+.rtabs nav li.tab-current a {
 	  color: var(--tab-primary);
 }
 
 /* Icons */
-.tabs nav a:before {
+.rtabs nav a:before {
 	  display: inline-block;
 	  vertical-align: middle;
 	  text-transform: none;
@@ -112,29 +114,29 @@
 /* Example media queries */
 
 @media screen and (max-width: 52.375em) {
-	  .tabs nav a span {
+	  .rtabs nav a span {
 		    display: none;
 	  }
 
-	  .tabs nav a:before {
+	  .rtabs nav a:before {
 		    margin-right: 0;
 	  }
 }
 
 @media screen and (max-width: 32em) {
-	  .tabs nav ul,
-	  .tabs nav ul li a {
+	  .rtabs nav ul,
+	  .rtabs nav ul li a {
 		    width: 100%;
 		    padding: 0;
 	  }
 
-	  .tabs nav ul li {
+	  .rtabs nav ul li {
 		    width: 20%;
 		    width: calc(20% + 1px);
 		    margin: 0 0 0 -1px;
 	  }
 
-	  .tabs nav ul li:last-child {
+	  .rtabs nav ul li:last-child {
 		    border-right: none;
 	  }
 }
